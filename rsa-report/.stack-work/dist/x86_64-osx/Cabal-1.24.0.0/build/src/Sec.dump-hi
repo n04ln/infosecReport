@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2016-11-01 09:12:53.424333 UTC
+2016-11-01 12:55:31.37354 UTC
 
 interface rsa-report-0.1.0.0-5iswHUjlzUzCMH0rDQAKao:Sec 8001
-  interface hash: da091c33cbed9d26482d5a5807dcf5b0
-  ABI hash: 5a38f1a4d942924d8b1835ef95705781
+  interface hash: 60142017c3262200e9f9e3420c5fa2d3
+  ABI hash: 7fc1016172dc83c62b12248023c3c10e
   export-list hash: 285a95ec1941358f27d22ef3b994a43a
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: a4046e0fdab24403354cf30558c1ea1c
@@ -123,12 +123,41 @@ f3aa9c645eea1cf6cbafd732e4c0f1d9
                    (w5 :: GHC.Integer.Type.Integer)
                    (w6 :: GHC.Integer.Type.Integer) ->
                  Sec.$wf w1 w2 w3 w4) -}
-839e3909477290b58359ca57bd0b9f22
-  getE :: [GHC.Integer.Type.Integer]
-  {- Unfolding: (Sec.getE_go Sec.createPrimeList1) -}
-ed805376b81723f52f5d57d87f6bc09c
-  getE_go :: GHC.Integer.Type.Integer -> [GHC.Integer.Type.Integer]
-  {- Arity: 1, Strictness: <S,U> -}
+3af314d27bffcdfd943814f3574462cc
+  getE :: GHC.Integer.Type.Integer -> [GHC.Integer.Type.Integer]
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (w1 :: GHC.Integer.Type.Integer) ->
+                 letrec {
+                   go :: GHC.Integer.Type.Integer -> [GHC.Integer.Type.Integer]
+                     {- Arity: 1, Strictness: <S,U> -}
+                   = \ (x :: GHC.Integer.Type.Integer) ->
+                     case GHC.Integer.Type.gtInteger# x w1 of wild { DEFAULT ->
+                     case GHC.Prim.tagToEnum# @ GHC.Types.Bool wild of wild1 {
+                       GHC.Types.False
+                       -> case GHC.Integer.Type.gtInteger#
+                                 x
+                                 Sec.getD1 of wild2 { DEFAULT ->
+                          case GHC.Prim.tagToEnum# @ GHC.Types.Bool wild2 of wild3 {
+                            GHC.Types.False
+                            -> go (GHC.Integer.Type.plusInteger x GHC.Enum.$fEnumInteger1)
+                            GHC.Types.True
+                            -> case GHC.Integer.Type.eqInteger#
+                                      (GHC.Integer.Type.gcdInteger w1 x)
+                                      Sec.getD2 of wild4 { DEFAULT ->
+                               case GHC.Prim.tagToEnum# @ GHC.Types.Bool wild4 of wild5 {
+                                 GHC.Types.False
+                                 -> go (GHC.Integer.Type.plusInteger x GHC.Enum.$fEnumInteger1)
+                                 GHC.Types.True
+                                 -> GHC.Types.:
+                                      @ GHC.Integer.Type.Integer
+                                      x
+                                      (go
+                                         (GHC.Integer.Type.plusInteger
+                                            x
+                                            GHC.Enum.$fEnumInteger1)) } } } }
+                       GHC.Types.True -> GHC.Types.[] @ GHC.Integer.Type.Integer } }
+                 } in
+                 go Sec.createPrimeList1) -}
 698fc8857b722bb6db62da5bfbd44309
   isPrime :: GHC.Types.Int -> GHC.Types.Bool
   {- Arity: 1, Strictness: <S(S),U(U)>,

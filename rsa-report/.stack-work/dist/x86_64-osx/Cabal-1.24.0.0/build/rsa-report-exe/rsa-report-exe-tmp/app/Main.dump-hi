@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2016-11-01 08:17:17.185212 UTC
+2016-11-05 10:58:51.292252 UTC
 
 interface main@main:Main 8001
-  interface hash: c753161c497ae0072567fdc6923575fe
-  ABI hash: 0202e8cd16c509c76ab11e3f0153c25a
+  interface hash: b7fa768f74f8dabd4f9e4814ef6b8576
+  ABI hash: 5be90ac28532f273efd9143e4038a539
   export-list hash: b2c59791a04008fc0d822119bfa9ff90
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: 86046bdcd6c4bb956025a248f6d4e801
@@ -24,6 +24,7 @@ family instance modules: base-4.9.0.0:Control.Applicative
                          base-4.9.0.0:GHC.Generics base-4.9.0.0:GHC.IO.Exception
                          base-4.9.0.0:GHC.TypeLits
 import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
+import  -/  base-4.9.0.0:System.IO ad985d7a3fc986e9b9c610fb344d9106
 import  -/  ghc-prim-0.5.0.0:GHC.Types 7378e41b7749213c8c88ceb6b0665d4c
 import  -/  rsa-report-0.1.0.0@rsa-report-0.1.0.0-5iswHUjlzUzCMH0rDQAKao:Lib 95514603560356f25c672f9d08b13e8c
 d6831ef04cb9301b090dfae6f7bb7ec7
@@ -38,19 +39,50 @@ d6831ef04cb9301b090dfae6f7bb7ec7
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "main"#) -}
-f7d5e68429ec394d9844c4037a50317b
+5b583df4d5fba32ea1f0f24d46f563e6
   main :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
-                Lib.someFunc1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-19a24c14a792a14dbd7c759db817429e
+                Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+5309695d208ff851aa94021b60818bd8
   main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (eta :: GHC.Prim.State#
+                             GHC.Prim.RealWorld)[OneShot] ->
+                 GHC.IO.Handle.Text.hPutStr2
+                   GHC.IO.Handle.FD.stdout
+                   Main.main2
+                   GHC.Types.True
+                   eta) -}
+f4b8e18d92c6fccde18fb13088e6c827
+  main2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   GHC.Show.shows8
+                   Main.main3) -}
+2296a46662f0812132bb6ff61153a6c0
+  main3 :: GHC.Base.String
+  {- Unfolding: (GHC.Show.showLitString Main.main5 Main.main4) -}
+a35b7e9355d5dc3db7e1203bfff470b7
+  main4 :: [GHC.Types.Char]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   GHC.Show.shows8
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+d6e078d4c53a7f2b855956b704fe356f
+  main5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "hello"#) -}
+6c61fe7d5923cb8ae07a5cee90fc1c8f
+  main6 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
   {- Arity: 1,
      Unfolding: (GHC.TopHandler.runMainIO1
                    @ ()
-                   Lib.someFunc1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+                   Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
 vectorised variables:
 vectorised tycons:
 vectorised reused tycons:

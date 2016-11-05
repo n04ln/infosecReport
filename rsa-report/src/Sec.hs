@@ -19,8 +19,8 @@ isPrime n = judgePrimeNum n (n-1)
 createPrimeList2 :: [Integer]
 createPrimeList2 = [ x| x <- [2..], and [x `mod` y /= 0 | y <- [2..(floor $ sqrt $ realToFrac x)]]]
 
-getE :: [Integer]
-getE = [e | e <- [2,3..w], e>0, gcd w e == 1]
+getE :: Integer -> [Integer]
+getE w = [e | e <- [2,3..w], e>0, gcd w e == 1]
 
 getD :: Integer -> Integer -> Integer
 getD x y  = f x y 1 0 0 1
