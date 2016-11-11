@@ -19,4 +19,9 @@
       </profile>
     </annotationProcessing>
   </component>
+  <component name="HaskellBuildOptions">
+    <ghcPath>/usr/local/bin/ghc</ghcPath>
+    <cabalPath>/usr/local/bin/cabal</cabalPath>
+    <stackPath>$USER_HOME$/.local/bin/stack</stackPath>
+  </component>
 </project>
