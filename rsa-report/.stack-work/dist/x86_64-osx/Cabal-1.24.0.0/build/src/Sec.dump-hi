@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2016-11-01 12:55:31.37354 UTC
+2016-11-12 14:11:14.409661 UTC
 
 interface rsa-report-0.1.0.0-5iswHUjlzUzCMH0rDQAKao:Sec 8001
-  interface hash: 60142017c3262200e9f9e3420c5fa2d3
-  ABI hash: 7fc1016172dc83c62b12248023c3c10e
-  export-list hash: 285a95ec1941358f27d22ef3b994a43a
+  interface hash: 1e905d371915016d8ff2c73f7930d028
+  ABI hash: 2613625a830242f60fe4625bdebc122c
+  export-list hash: 9007c26073e3730d56f927372bfaa285
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: a4046e0fdab24403354cf30558c1ea1c
   sig of: Nothing
@@ -17,10 +17,6 @@ exports:
   Sec.getD
   Sec.getE
   Sec.isPrime
-  Sec.n
-  Sec.p
-  Sec.q
-  Sec.w
 module dependencies:
 package dependencies: base-4.9.0.0* ghc-prim-0.5.0.0
                       integer-gmp-1.0.0.1
@@ -51,36 +47,24 @@ be1af75d3aea28f44cde71361088a337
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
                    "rsa-report-0.1.0.0-5iswHUjlzUzCMH0rDQAKao"#) -}
-5d76861c9d26588b1f390109aa27bd04
-  $wcreatePrimeList ::
-    GHC.Prim.Int# -> GHC.Prim.Int# -> [GHC.Types.Int]
-  {- Arity: 2, Strictness: <S,U><S,U>, Inline: [0] -}
-f787411950e484ef3a12768b1c64b916
+8ef432f76b6bd8ab1edcb296ee6db696
   $wf ::
     GHC.Integer.Type.Integer
     -> GHC.Integer.Type.Integer
     -> GHC.Integer.Type.Integer
     -> GHC.Integer.Type.Integer
     -> GHC.Integer.Type.Integer
-  {- Arity: 4, Strictness: <L,U><S,U><L,U><L,U>, Inline: [0] -}
+  {- Arity: 4, Strictness: <L,U><S,U><L,1*U><L,U>, Inline: [0] -}
 fda167e1cb0d8d6a352043d186addb97
   $wgo ::
     GHC.Integer.Type.Integer
     -> (# GHC.Integer.Type.Integer, [GHC.Integer.Type.Integer] #)
   {- Arity: 1, Strictness: <S,1*U>, Inline: [0] -}
-a1aac46667f0a95555bc2f63425ace7e
-  $wjudgePrimeNum :: GHC.Types.Int -> GHC.Prim.Int# -> GHC.Types.Bool
-  {- Arity: 2, Strictness: <L,1*U(U)><S,1*U>, Inline: [0] -}
-8fdad5e1ba0412b4fece917b21db5d7f
+1031d60212c92e45e3985cedb952bf63
   createPrimeList ::
-    GHC.Types.Int -> GHC.Types.Int -> [GHC.Types.Int]
-  {- Arity: 2, Strictness: <S(S),1*U(U)><S(S),1*U(U)>,
-     Inline: INLINE[0],
-     Unfolding: InlineRule (2, True, False)
-                (\ (w1 :: GHC.Types.Int) (w2 :: GHC.Types.Int) ->
-                 case w1 of ww { GHC.Types.I# ww1 ->
-                 case w2 of ww2 { GHC.Types.I# ww3 ->
-                 Sec.$wcreatePrimeList ww1 ww3 } }) -}
+    GHC.Integer.Type.Integer
+    -> GHC.Integer.Type.Integer -> [GHC.Integer.Type.Integer]
+  {- Arity: 2, Strictness: <S,U><S,U> -}
 1c08cc6f64b10104964947b78ce3b47b
   createPrimeList1 :: GHC.Integer.Type.Integer
   {- HasNoCafRefs, Unfolding: (2) -}
@@ -89,22 +73,22 @@ a1aac46667f0a95555bc2f63425ace7e
   {- Unfolding: (case Sec.$wgo
                         Sec.createPrimeList1 of ww { (#,#) ww1 ww2 ->
                  GHC.Types.: @ GHC.Integer.Type.Integer ww1 ww2 }) -}
-2013ab8d8aa0ec7c38a0c894a43cfd1d
+595cf5bade145bd7653f918f35c746a9
   getD ::
     GHC.Integer.Type.Integer
     -> GHC.Integer.Type.Integer -> GHC.Integer.Type.Integer
   {- Arity: 2, Strictness: <L,U><S,U>,
      Unfolding: InlineRule (2, True, False)
-                (\ (x :: GHC.Integer.Type.Integer)
-                   (y :: GHC.Integer.Type.Integer) ->
-                 Sec.getD_f x y Sec.getD2 Sec.getD1 Sec.getD1 Sec.getD2) -}
+                (\ (e :: GHC.Integer.Type.Integer)
+                   (w :: GHC.Integer.Type.Integer) ->
+                 Sec.getD_f e w Sec.getD2 Sec.getD1 Sec.getD1 Sec.getD2) -}
 f3aa9c645eea1cf6cbafd732e4c0f1d9
   getD1 :: GHC.Integer.Type.Integer
   {- HasNoCafRefs, Unfolding: (0) -}
 5e6beca258548512f8983bd34fdd8a74
   getD2 :: GHC.Integer.Type.Integer
   {- HasNoCafRefs, Unfolding: (1) -}
-824dc2d1a718cd300a8a69015984ea9b
+dce71967c5912abd51e5de3d5c0ad332
   getD_f ::
     GHC.Integer.Type.Integer
     -> GHC.Integer.Type.Integer
@@ -113,25 +97,25 @@ f3aa9c645eea1cf6cbafd732e4c0f1d9
     -> GHC.Integer.Type.Integer
     -> GHC.Integer.Type.Integer
     -> GHC.Integer.Type.Integer
-  {- Arity: 6, Strictness: <L,U><S,U><L,U><L,U><L,A><L,A>,
+  {- Arity: 6, Strictness: <L,U><S,U><L,1*U><L,U><L,A><L,A>,
      Inline: INLINE[0],
      Unfolding: InlineRule (6, True, True)
-                (\ (w1 :: GHC.Integer.Type.Integer)
+                (\ (w :: GHC.Integer.Type.Integer)
+                   (w1 :: GHC.Integer.Type.Integer)
                    (w2 :: GHC.Integer.Type.Integer)
                    (w3 :: GHC.Integer.Type.Integer)
                    (w4 :: GHC.Integer.Type.Integer)
-                   (w5 :: GHC.Integer.Type.Integer)
-                   (w6 :: GHC.Integer.Type.Integer) ->
-                 Sec.$wf w1 w2 w3 w4) -}
-3af314d27bffcdfd943814f3574462cc
+                   (w5 :: GHC.Integer.Type.Integer) ->
+                 Sec.$wf w w1 w2 w3) -}
+4e9e59e78fd56ad0402c07e40b663648
   getE :: GHC.Integer.Type.Integer -> [GHC.Integer.Type.Integer]
   {- Arity: 1, Strictness: <S,U>,
-     Unfolding: (\ (w1 :: GHC.Integer.Type.Integer) ->
+     Unfolding: (\ (w :: GHC.Integer.Type.Integer) ->
                  letrec {
                    go :: GHC.Integer.Type.Integer -> [GHC.Integer.Type.Integer]
                      {- Arity: 1, Strictness: <S,U> -}
                    = \ (x :: GHC.Integer.Type.Integer) ->
-                     case GHC.Integer.Type.gtInteger# x w1 of wild { DEFAULT ->
+                     case GHC.Integer.Type.gtInteger# x w of wild { DEFAULT ->
                      case GHC.Prim.tagToEnum# @ GHC.Types.Bool wild of wild1 {
                        GHC.Types.False
                        -> case GHC.Integer.Type.gtInteger#
@@ -142,7 +126,7 @@ f3aa9c645eea1cf6cbafd732e4c0f1d9
                             -> go (GHC.Integer.Type.plusInteger x GHC.Enum.$fEnumInteger1)
                             GHC.Types.True
                             -> case GHC.Integer.Type.eqInteger#
-                                      (GHC.Integer.Type.gcdInteger w1 x)
+                                      (GHC.Integer.Type.gcdInteger w x)
                                       Sec.getD2 of wild4 { DEFAULT ->
                                case GHC.Prim.tagToEnum# @ GHC.Types.Bool wild4 of wild5 {
                                  GHC.Types.False
@@ -158,36 +142,19 @@ f3aa9c645eea1cf6cbafd732e4c0f1d9
                        GHC.Types.True -> GHC.Types.[] @ GHC.Integer.Type.Integer } }
                  } in
                  go Sec.createPrimeList1) -}
-698fc8857b722bb6db62da5bfbd44309
-  isPrime :: GHC.Types.Int -> GHC.Types.Bool
-  {- Arity: 1, Strictness: <S(S),U(U)>,
+dccf6b4f8c767109404baacffc65e43b
+  isPrime :: GHC.Integer.Type.Integer -> GHC.Types.Bool
+  {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (1, True, False)
-                (\ (n1 :: GHC.Types.Int) ->
-                 case n1 of wild { GHC.Types.I# x ->
+                (\ (n :: GHC.Integer.Type.Integer) ->
                  Sec.isPrime_judgePrimeNum
-                   wild
-                   (GHC.Types.I# (GHC.Prim.-# x 1#)) }) -}
-4a1462a3ca644629a89b4d08dc1384f4
+                   n
+                   (GHC.Integer.Type.minusInteger n Sec.getD2)) -}
+eab332046362196b60ec47e48733815d
   isPrime_judgePrimeNum ::
-    GHC.Types.Int -> GHC.Types.Int -> GHC.Types.Bool
-  {- Arity: 2, Strictness: <L,1*U(U)><S(S),1*U(1*U)>,
-     Inline: INLINE[0],
-     Unfolding: InlineRule (2, True, False)
-                (\ (w1 :: GHC.Types.Int) (w2 :: GHC.Types.Int) ->
-                 case w2 of ww { GHC.Types.I# ww1 ->
-                 Sec.$wjudgePrimeNum w1 ww1 }) -}
-f6e870d3e82150dd435464738ad2d5d8
-  n :: GHC.Integer.Type.Integer
-  {- HasNoCafRefs, Unfolding: (383407) -}
-65294268d7c29c53841bd168614568e1
-  p :: GHC.Integer.Type.Integer
-  {- HasNoCafRefs, Unfolding: (821) -}
-65f0de0e9904f9e59fcd49169f4a9496
-  q :: GHC.Integer.Type.Integer
-  {- HasNoCafRefs, Unfolding: (467) -}
-c3cfdcdda3b706f3dece9855d8fce4d2
-  w :: GHC.Integer.Type.Integer
-  {- HasNoCafRefs, Unfolding: (382120) -}
+    GHC.Integer.Type.Integer
+    -> GHC.Integer.Type.Integer -> GHC.Types.Bool
+  {- Arity: 2, Strictness: <L,U><S,U> -}
 vectorised variables:
 vectorised tycons:
 vectorised reused tycons:

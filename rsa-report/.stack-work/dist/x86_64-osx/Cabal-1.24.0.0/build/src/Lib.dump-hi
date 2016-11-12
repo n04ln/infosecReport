@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2016-11-01 08:17:16.730576 UTC
+2016-11-12 14:40:17.410961 UTC
 
 interface rsa-report-0.1.0.0-5iswHUjlzUzCMH0rDQAKao:Lib 8001
-  interface hash: 96669970af075fc5d354ebbc404a4629
-  ABI hash: 95514603560356f25c672f9d08b13e8c
+  interface hash: 6dfe8aa7bdd638c1297e115b0e47aece
+  ABI hash: 3e03178df80423081cc19558d9ff4270
   export-list hash: 68e02c51f5e4750c383eba713939318a
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: a4046e0fdab24403354cf30558c1ea1c
@@ -13,7 +13,7 @@ interface rsa-report-0.1.0.0-5iswHUjlzUzCMH0rDQAKao:Lib 8001
   where
 exports:
   Lib.someFunc
-module dependencies:
+module dependencies: Sec
 package dependencies: base-4.9.0.0* ghc-prim-0.5.0.0
                       integer-gmp-1.0.0.1
 orphans: base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
@@ -22,9 +22,23 @@ family instance modules: base-4.9.0.0:Control.Applicative
                          base-4.9.0.0:Data.Monoid base-4.9.0.0:Data.Type.Equality
                          base-4.9.0.0:GHC.Generics base-4.9.0.0:GHC.IO.Exception
                          base-4.9.0.0:GHC.TypeLits
+import  -/  base-4.9.0.0:Data.Functor 6fc476505db88d678632a4a838125f13
+import  -/  base-4.9.0.0:Data.OldList 0058409f994fb13ae0616e3f1e5b4dae
+import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
+import  -/  base-4.9.0.0:GHC.List 13d2451194c1c6e53b4f4f07947736dd
+import  -/  base-4.9.0.0:GHC.Num 48f506a8f4ecf06285d0a0706594dcc0
+import  -/  base-4.9.0.0:GHC.Real 08bf4acb5f2508f89d6fbcd57fe232e9
+import  -/  base-4.9.0.0:GHC.Show 952347a6ab730bcb25c0854d8bc6ca51
 import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
 import  -/  base-4.9.0.0:System.IO ad985d7a3fc986e9b9c610fb344d9106
+import  -/  base-4.9.0.0:Text.Read 9c1be14f7e5eac8b18bcb566c5763677
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
 import  -/  ghc-prim-0.5.0.0:GHC.Types 7378e41b7749213c8c88ceb6b0665d4c
+import  -/  integer-gmp-1.0.0.1:GHC.Integer.Type 62c0e736506aac47ef40569f5b82e19d
+import  -/  Sec 2613625a830242f60fe4625bdebc122c
+  exports: 9007c26073e3730d56f927372bfaa285
+  getD 595cf5bade145bd7653f918f35c746a9
+  getE 4e9e59e78fd56ad0402c07e40b663648
 18598d11f7ef628ca13e27cf090faa95
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
@@ -38,26 +52,16 @@ eab73f5120a78b977095a5c220e24065
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
                    "rsa-report-0.1.0.0-5iswHUjlzUzCMH0rDQAKao"#) -}
-b3937e86b5e86a454924d6740689137e
+c3272f8abfceee56fa6bd5cfde4777c3
   someFunc :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Lib.someFunc1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-a8aa97f2043f6d3b3df0a21b2b628bff
+39a62be6a275f8d0465485f144059c49
   someFunc1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
-  {- Arity: 1, Strictness: <S,U>,
-     Unfolding: (\ (eta :: GHC.Prim.State#
-                             GHC.Prim.RealWorld)[OneShot] ->
-                 GHC.IO.Handle.Text.hPutStr2
-                   GHC.IO.Handle.FD.stdout
-                   Lib.someFunc2
-                   GHC.Types.True
-                   eta) -}
-feca02d24b775445c54538ecf15d1526
-  someFunc2 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "someFunc"#) -}
+  {- Arity: 1, Strictness: <S,U> -}
 vectorised variables:
 vectorised tycons:
 vectorised reused tycons:
