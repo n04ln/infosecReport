@@ -14,7 +14,7 @@
 input number ["p", "q"] ->
 {P} {Q}
 ```
-- Input p,q number in {P, Q NUM}.
+- Input p,q number in {P} and {Q}.
 - e.g.
 ```
 % stack exec rsa-report-exe
