@@ -9,7 +9,7 @@ toString n = show n
 
 someFunc :: IO ()
 someFunc = do
-  putStrLn "input number [\"p\", \"q\"] ->  "
+  putStrLn "Input number [\"p\", \"q\"] ->  "
   pq <- fmap (read :: String -> Integer) . words <$> getLine
   let n  = (pq !! 0)     * (pq !! 1)
       w  = (pq !! 0 - 1) * (pq !! 1 - 1)
@@ -21,4 +21,4 @@ someFunc = do
   if gcd e w /= 1 then do
                   putStrLn "ERR : This is not e-number"
                   return ()
-                  else putStrLn $ "public_key is (" ++ (toString n) ++ ", " ++ (toString e) ++ "), Secret_key is " ++ (toString d)
+                  else putStrLn $ "Public_key is (" ++ (toString n) ++ ", " ++ (toString e) ++ "), Secret_key is " ++ (toString d)
