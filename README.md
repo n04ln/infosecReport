@@ -37,7 +37,7 @@ Please select e-number : [11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,
 
 #### Result format
 ```
-public_key is ({n}, {e}), Secret_key is {d}
+Public_key is ({n}, {e}), Secret_key is {d}
 ```
 - e.g.
 ```
