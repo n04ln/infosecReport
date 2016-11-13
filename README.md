@@ -11,14 +11,14 @@
 ##### STEP 1.
 ```
 % stack exec rsa-report-exe
-input number ["p", "q"] ->
+Input number ["p", "q"] ->
 {P} {Q}
 ```
 - Input p,q number in {P} and {Q}.
 - e.g.
 ```
 % stack exec rsa-report-exe
-input number ["p", "q"] ->
+Input number ["p", "q"] ->
 41 43
 ```
 
@@ -41,5 +41,5 @@ public_key is ({n}, {e}), Secret_key is {d}
 ```
 - e.g.
 ```
-public_key is (1763, 11), Secret_key is 611
+Public_key is (1763, 11), Secret_key is 611
 ```
