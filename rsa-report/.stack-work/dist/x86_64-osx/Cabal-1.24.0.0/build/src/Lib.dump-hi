@@ -1,9 +1,9 @@
 
 ==================== FINAL INTERFACE ====================
-2016-11-13 03:43:59.594018 UTC
+2016-11-13 11:57:28.796225 UTC
 
 interface rsa-report-0.1.0.0-5iswHUjlzUzCMH0rDQAKao:Lib 8001
-  interface hash: 6dfe8aa7bdd638c1297e115b0e47aece
+  interface hash: f0343283c4bb040ca1e166c8caec3474
   ABI hash: 3e03178df80423081cc19558d9ff4270
   export-list hash: 68e02c51f5e4750c383eba713939318a
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
@@ -22,6 +22,7 @@ family instance modules: base-4.9.0.0:Control.Applicative
                          base-4.9.0.0:Data.Monoid base-4.9.0.0:Data.Type.Equality
                          base-4.9.0.0:GHC.Generics base-4.9.0.0:GHC.IO.Exception
                          base-4.9.0.0:GHC.TypeLits
+import  -/  base-4.9.0.0:Data.Foldable 8aeb682f6c74f97fcf0ace0d608a43ea
 import  -/  base-4.9.0.0:Data.Functor 6fc476505db88d678632a4a838125f13
 import  -/  base-4.9.0.0:Data.OldList 0058409f994fb13ae0616e3f1e5b4dae
 import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
@@ -39,6 +40,7 @@ import  -/  Sec 2613625a830242f60fe4625bdebc122c
   exports: 9007c26073e3730d56f927372bfaa285
   getD 595cf5bade145bd7653f918f35c746a9
   getE 4e9e59e78fd56ad0402c07e40b663648
+  isPrime dccf6b4f8c767109404baacffc65e43b
 18598d11f7ef628ca13e27cf090faa95
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
