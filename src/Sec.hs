@@ -1,4 +1,4 @@
-module Sec (createPrimeList, createPrimeList2, isPrime, getE, getD) where
+module Sec (primeListThan8d, createPrimeList, createPrimeList2, isPrime, getE, getD) where
 
 createPrimeList :: Integer -> Integer -> [Integer]
 createPrimeList n x
@@ -12,8 +12,14 @@ isPrime n = judgePrimeNum n (n-1)
   where judgePrimeNum x 1 = True
         judgePrimeNum x y = if (x `mod` y) == 0 then False else judgePrimeNum x ( y - 1 )
 
+iPrimeList2 :: [Integer] -> [Integer]
+iPrimeList2 xs = [ x| x <- xs , and [x `mod` y /= 0 | y <- [2..(floor $ sqrt $ realToFrac x)]]]
+
 createPrimeList2 :: [Integer]
-createPrimeList2 = [ x| x <- [2..], and [x `mod` y /= 0 | y <- [2..(floor $ sqrt $ realToFrac x)]]]
+createPrimeList2 = iPrimeList2 [2..]
+
+primeListThan8d :: [Integer]
+primeListThan8d = iPrimeList2 [(10 ^ 9)..]
 
 getE :: Integer -> [Integer]
 getE w = [e | e <- [2,3..w], e>0, gcd w e == 1]
